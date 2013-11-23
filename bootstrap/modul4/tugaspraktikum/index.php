@@ -1,27 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Akses dan Manipulasi Data</title>
-<style type="text/css">
-.inner{
-margin:200px auto; padding:20px; width:240px; border:1px solid #333; background-color:#3366FF;}
-</style>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign in &middot; Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body background="windows-7-wallpaper-17.jpg">
+    <!-- Le styles -->
+    <link href="../../dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
 
-<p>
- <?php
-ini_set('display_erroAutenrs', 1);
-define('_VALID', 1);
-//include file eksternal
-require_once('./auth.php');
-init_login();
-validate();
-?>
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+  </head>
+<body>
+<div class="container">
 
 
-<a href="?m=logout"></a>
-</body>
-</html>
+
+	<form class="form-signin" action="proses.php" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="input-block-level" name="nama" placeholder="User Name">
+        <input type="password" class="input-block-level" name="pass" placeholder="Password">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+    
+    
